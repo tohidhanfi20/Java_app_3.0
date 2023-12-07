@@ -52,3 +52,4 @@ Now we can cleanup by using below commands:
 # springboot_k8s_application
 # mrdevops_java_app
 # Java_app_3.0
+# Java_app_3.0
