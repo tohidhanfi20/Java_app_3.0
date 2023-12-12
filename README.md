@@ -9,7 +9,7 @@ Pre-requisites:
     
 Clone code from github:
 -------
-    git clone https://github.com/vikash-kumar01/spring-cloud-kubernetes.git
+    git clone https://github.com/tohidhanfi20/Java_app_3.0
     cd spring-cloud-kubernetes/kubernetes-configmap-reload
     
 Build Maven Artifact:
