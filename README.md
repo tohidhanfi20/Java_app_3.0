@@ -1,3 +1,42 @@
+Step 1 – Create the Ec2 instance in AWS account with these parameters
+--------
+    - EC2 type – Ubuntu t2.medium
+    - EBS volume – 30 GB 
+    - Region - US EAST 1
+
+image
+
+Step 2 – Connect to EC2 and Install all tools in that system as root user
+-------
+
+    - To login as root user - sudo su
+
+Step 3 – Install Jenkins on Ubuntu
+-------
+ 
+   -  Just copy paste the entire command
+     
+    sudo apt update -y
+
+    sudo apt upgrade -y 
+
+    sudo apt install openjdk-17-jre -y
+
+    curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+    /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+    
+    echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+    https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+    /etc/apt/sources.list.d/jenkins.list > /dev/null
+    
+    sudo apt-get update -y 
+    
+    sudo apt-get install jenkins -y
+
+
+
+
+
 # kubernetes-configmap-reload
 
 Pre-requisites:
