@@ -127,13 +127,13 @@ Step 15 – Install TRIVY for docker image scan
 
 - Just copy paste the entire command
 
-   # A Simple and Comprehensive Vulnerability Scanner for Containers and other Artifacts, Suitable for CI.
+   - A Simple and Comprehensive Vulnerability Scanner for Containers and other Artifacts, Suitable for CI.
 
-      - sudo apt-get install wget apt-transport-https gnupg lsb-release
-        wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
-        echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
-        sudo apt-get update
-        sudo apt-get install trivy
+         - sudo apt-get install wget apt-transport-https gnupg lsb-release
+           wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+           echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+           sudo apt-get update
+           sudo apt-get install trivy
 
 Step 16 - Integrate All tools with Jenkins  
 
@@ -150,68 +150,14 @@ jenkins dashboard -> Manage Jenkins -> Credentials -> System -> click on global 
 
 ADD the docker hub credentials with name as docker
 
-Step 18 – Add the Jenkins Shared library
+Step 19 – Add the Jenkins Shared library
 
 Go to Manage Jenkins -> Configure system -> Global pipeline library -> Add below data Name -my-shared-library Default version – main
 
 git - https://github.com/tohidhanfi20/jenkins_shared_lib
 
+Step 20 - Once pipeline is Run Check 
 
-
-
-     
-# kubernetes-configmap-reload
-
-Pre-requisites:
---------
-    - Install Git
-    - Install Maven
-    - Install Docker
-    - EKS Cluster
-    
-Clone code from github:
--------
-    git clone https://github.com/tohidhanfi20/Java_app_3.0
-    cd spring-cloud-kubernetes/kubernetes-configmap-reload
-    
-Build Maven Artifact:
--------
-    mvn clean install
- 
-Build Docker image for Springboot Application
---------------
-    docker build -t vikashashoke/kubernetes-configmap-reload .
-  
-Docker login
--------------
-    docker login
-    
-Push docker image to dockerhub
------------
-    docker push vikashashoke/kubernetes-configmap-reload
-    
-Deploy Spring Application:
---------
-    kubectl apply -f kubernetes-configmap.yml
-    
-Check Deployments, Pods and Services:
--------
-
-    kubectl get deploy
-    kubectl get pods
-    kubectl get svc
-    
-Now Goto Loadbalancer and check whether service comes Inservice or not, If it comes Inservice copy DNS Name of Loadbalancer and Give in WebUI
-
-    http://a70a89c22e06f49f3ba2b3270e974e29-1311314938.us-west-2.elb.amazonaws.com:8080/home/data
-    
-![2](https://user-images.githubusercontent.com/63221837/82123471-44f5f300-97b7-11ea-9d10-438cf9cc98a0.png)
-
-Now we can cleanup by using below commands:
---------
-    kubectl delete deploy kubernetes-configmap-reload
-    kubectl delete svc kubernetes-configmap-reload
-# springboot_k8s_application
-# mrdevops_java_app
-# Java_app_3.0
-# Java_app_3.0
+    - The Jenkins logs
+    - The Trivy scan vulnerabilities 
+    - The sonarqube dashboard for report
