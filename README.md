@@ -2,7 +2,7 @@ Step 1 – Create the Ec2 instance in AWS account with these parameters
 --------
     - EC2 type – Ubuntu t2.medium
     - EBS volume – 30 GB 
-    - Region - US EAST 1
+    - Region -AP SOUTH 1
 
 image
 
