@@ -107,7 +107,7 @@ Step 13.2 -> Log in into sonar dashboard
 
 Step 13.3 -> Create Sonar token for Jenkin 
 
-Sonar Dashboard -> Administration -> MyAccount -> Security -> Create token -> Save the token to some text file
+Sonar Dashboard -> Top right corner -> MyAccount -> Security -> Create token -> Save the token to some text file
 
 Step 13.4 -> Integrate Sonar to Jenkins
 
