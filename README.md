@@ -34,9 +34,68 @@ Step 3 – Install Jenkins on Ubuntu
     sudo apt-get install jenkins -y
 
 
+Step 4 – Change the security group of ec2 instance
+-------
+ 
+    -  All traffic
+    - Anywhere IPV4
+
+Step 5 – Sign Into Jenkins console 
+
+    - http://<EC2_PUBLIC_IP>:8080/    
+
+Step 6 – Get the Administrator password by hitting the below command in EC2    
+
+    - cat/var/lib/jenkins/secrets/initialAdminPassword
+
+Step 7 – Install all suggested Plugins
+
+Step 8 – Create first user
+
+Step9* – Create a pipeline Job
+
+Step 10 – Add pipeline script as SCM
+
+    - https://github.com/tohidhanfi20/Java_app_3.0   
+
+Step 11 – Add the Plugins
+Dashboard -> Manage Jenkins -> Plugins -> Available plugins
+
+    - Plugins for Sonar/Jfrog
+    – Sonar Gerrit 
+    - SonarQube Scanner
+    - SonarQube Generic Coverage 
+    - Sonar Quality Gates 
+    - Quality Gates 
+    - Artifactory
+    - Jfrog
+
+Step 12 – Setup Docker
+
+-  Just copy paste the entire command
+
+       - sudo apt update -y
+
+         sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+
+         curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+         sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" -y
+
+         sudo apt update -y
+
+         apt-cache policy docker-ce -y
+
+         sudo apt install docker-ce -y
+
+   #sudo systemctl status docker
+
+         sudo chmod 777 /var/run/docker.sock
 
 
 
+
+     
 # kubernetes-configmap-reload
 
 Pre-requisites:
