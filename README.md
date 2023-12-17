@@ -1,4 +1,4 @@
-## JENKINS CICD PIPELINE
+# JENKINS CICD PIPELINE
 
 
 Step 1 – Create the Ec2 instance in AWS account with these parameters
