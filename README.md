@@ -7,7 +7,7 @@ Step 1 – Create the Ec2 instance in AWS account with these parameters
     - EBS volume – 30 GB 
     - Region -AP SOUTH 1
 
-image
+<img width="400" height="400" src=https://github.com/tohidhanfi20/Compozent-Basic-task-2/blob/main/Screenshots/ubuntu%20instance.png>
 
 Step 2 – Connect to EC2 and Install all tools in that system as root user
 -------
