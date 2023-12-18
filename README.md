@@ -59,7 +59,7 @@ Step 7 – Install all suggested Plugins
 Step 8 – Create first user
 -------
 
-Step9* – Create a pipeline Job
+Step9 – Create a pipeline Job
 -------
 
 Step 10 – Add pipeline script as SCM
