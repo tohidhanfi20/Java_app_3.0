@@ -36,8 +36,10 @@ Step 3 – Install Jenkins on Ubuntu
     sudo apt-get update -y 
     
     sudo apt-get install jenkins -y
+    
 
 <img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step3.png">
+
 
 Step 4 – Change the security group of ec2 instance
 -------
@@ -141,7 +143,7 @@ Sonar Dashboard -> Administration -> Configuration -> webhooks -> Add the below 
 
         - http://<EC2_IP>:8080/sonarqube-webhook/
 
-<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step13.4.png">
+<img width="800" height="600" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step13.4.png">
 
 Step 14 – Install Maven
 ---------
@@ -181,7 +183,7 @@ step13.3 -> Give name of token as sonarqube-api
 Step 18 - Add the docker HUB credentials ID
 ---------
 
-<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step18.png">
+<img width="1200" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step18.png">
 
 jenkins dashboard -> Manage Jenkins -> Credentials -> System -> click on global credentials
 
@@ -201,9 +203,9 @@ Step 20 - Once pipeline is Run Check
     - The Trivy scan vulnerabilities 
     - The sonarqube dashboard for report
 
-<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/last%20report.png">
+<img width="1000" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/last%20report.png">
 
-<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/Jenkins%20workspace.png">
+<img width="1000" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/Jenkins%20workspace.png">
 
-<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/last%20me.png">
+<img width="1000" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/last%20me.png">
 
