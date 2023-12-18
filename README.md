@@ -37,6 +37,7 @@ Step 3 – Install Jenkins on Ubuntu
     
     sudo apt-get install jenkins -y
 
+<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step3.png">
 
 Step 4 – Change the security group of ec2 instance
 -------
@@ -48,6 +49,8 @@ Step 5 – Sign Into Jenkins console
 -------
 
     - http://<EC2_PUBLIC_IP>:8080/    
+
+<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step5.png">
 
 Step 6 – Get the Administrator password by hitting the below command in EC2    
 -------
@@ -62,11 +65,16 @@ Step 8 – Create first user
 
 Step9 – Create a pipeline Job
 -------
+<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step9.png">
+
+<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step9.1.png">
 
 Step 10 – Add pipeline script as SCM
 -------
 
     - https://github.com/tohidhanfi20/Java_app_3.0   
+    
+<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step10.png">
 
 Step 11 – Add the Plugins
 Dashboard -> Manage Jenkins -> Plugins -> Available plugins
@@ -80,6 +88,8 @@ Dashboard -> Manage Jenkins -> Plugins -> Available plugins
     - Quality Gates 
     - Artifactory
     - Jfrog
+    
+<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step11.png">
 
 Step 12 – Setup Docker
 ---------
@@ -131,6 +141,8 @@ Sonar Dashboard -> Administration -> Configuration -> webhooks -> Add the below 
 
         - http://<EC2_IP>:8080/sonarqube-webhook/
 
+<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step13.4.png">
+
 Step 14 – Install Maven
 ---------
 
@@ -169,6 +181,8 @@ step13.3 -> Give name of token as sonarqube-api
 Step 18 - Add the docker HUB credentials ID
 ---------
 
+<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step18.png">
+
 jenkins dashboard -> Manage Jenkins -> Credentials -> System -> click on global credentials
 
 ADD the docker hub credentials with name as docker
@@ -186,3 +200,10 @@ Step 20 - Once pipeline is Run Check
     - The Jenkins logs
     - The Trivy scan vulnerabilities 
     - The sonarqube dashboard for report
+
+<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/last%20report.png">
+
+<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/Jenkins%20workspace.png">
+
+<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/last%20me.png">
+
