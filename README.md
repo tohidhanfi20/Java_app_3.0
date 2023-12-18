@@ -44,25 +44,32 @@ Step 4 – Change the security group of ec2 instance
     - Anywhere IPV4
 
 Step 5 – Sign Into Jenkins console 
+-------
 
     - http://<EC2_PUBLIC_IP>:8080/    
 
 Step 6 – Get the Administrator password by hitting the below command in EC2    
+-------
 
     - cat/var/lib/jenkins/secrets/initialAdminPassword
 
 Step 7 – Install all suggested Plugins
+-------
 
 Step 8 – Create first user
+-------
 
 Step9* – Create a pipeline Job
+-------
 
 Step 10 – Add pipeline script as SCM
+-------
 
     - https://github.com/tohidhanfi20/Java_app_3.0   
 
 Step 11 – Add the Plugins
 Dashboard -> Manage Jenkins -> Plugins -> Available plugins
+-------
 
     - Plugins for Sonar/Jfrog
     – Sonar Gerrit 
@@ -74,6 +81,7 @@ Dashboard -> Manage Jenkins -> Plugins -> Available plugins
     - Jfrog
 
 Step 12 – Setup Docker
+---------
 
 -  Just copy paste the entire command
 
@@ -91,16 +99,17 @@ Step 12 – Setup Docker
 
          sudo apt install docker-ce -y
 
-   #sudo systemctl status docker
+         sudo systemctl status docker
 
          sudo chmod 777 /var/run/docker.sock
 
 Step 13 - Install SonarQube
+--------
 
          -  docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
 
 Step 13.1 -> Start docker container if it's not up   
-
+--------
       - docker ps -a [Get the container ID]
       - docker start <containerID>
 Step 13.2 -> Log in into sonar dashboard  
@@ -109,16 +118,20 @@ Step 13.2 -> Log in into sonar dashboard
       - Password – admin
 
 Step 13.3 -> Create Sonar token for Jenkin 
+---------
 
 Sonar Dashboard -> Top right corner -> MyAccount -> Security -> Create token -> Save the token to some text file
 
+
 Step 13.4 -> Integrate Sonar to Jenkins
+---------
 
 Sonar Dashboard -> Administration -> Configuration -> webhooks -> Add the below name and url and save
 
         - http://<EC2_IP>:8080/sonarqube-webhook/
 
 Step 14 – Install Maven
+---------
 
 - Just copy paste the entire command
 
@@ -127,8 +140,9 @@ Step 14 – Install Maven
           mvn -version
 
 Step 15 – Install TRIVY for docker image scan  
+----------
 
-- Just copy paste the entire command
+   - Just copy paste the entire command
 
    - A Simple and Comprehensive Vulnerability Scanner for Containers and other Artifacts, Suitable for CI.
 
@@ -139,27 +153,34 @@ Step 15 – Install TRIVY for docker image scan
            sudo apt-get install trivy
 
 Step 16 - Integrate All tools with Jenkins  
+-------
 
 Jenkins Dashboard -> Manage Jenkins -> configure system
 
 Step 17 – ADD SONARQUBE
+--------
 
 Step 17.1 -> Click on sonarqube servers -> add url and name -> Click on add token -> Select Secret text -> Add the sonar token from 
+---------
+
 step13.3 -> Give name of token as sonarqube-api
 
 Step 18 - Add the docker HUB credentials ID
+---------
 
 jenkins dashboard -> Manage Jenkins -> Credentials -> System -> click on global credentials
 
 ADD the docker hub credentials with name as docker
 
 Step 19 – Add the Jenkins Shared library
+---------
 
 Go to Manage Jenkins -> Configure system -> Global pipeline library -> Add below data Name -my-shared-library Default version – main
 
 git - https://github.com/tohidhanfi20/jenkins_shared_lib
 
 Step 20 - Once pipeline is Run Check 
+---------
 
     - The Jenkins logs
     - The Trivy scan vulnerabilities 
