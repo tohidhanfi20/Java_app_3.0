@@ -7,7 +7,7 @@ Step 1 – Create the Ec2 instance in AWS account with these parameters
     - EBS volume – 30 GB 
     - Region -AP SOUTH 1
 
-<img width="1200" height="500" src=<https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step%1.png>
+<img width="1200" height="500" src=<https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step1.png>
 
 Step 2 – Connect to EC2 and Install all tools in that system as root user
 -------
