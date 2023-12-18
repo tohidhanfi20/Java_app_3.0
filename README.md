@@ -13,6 +13,7 @@ Step 2 – Connect to EC2 and Install all tools in that system as root user
 -------
 
     - To login as root user - sudo su
+<img width="800" height="300" src="https://github.com/tohidhanfi20/Java_app_3.0/blob/main/Screenshot's/step2.png">
 
 Step 3 – Install Jenkins on Ubuntu
 -------
